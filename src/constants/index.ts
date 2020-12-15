@@ -12,13 +12,13 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD//C')
-export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
-export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
-export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
-export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
-export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8, 'WBTC', 'Wrapped BTC')
+export const DAI = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 18, 'DAI', 'Dai Stablecoin')
+export const USDC = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 6, 'USDC', 'USD//C')
+export const USDT = new Token(ChainId.MAINNET, '0xEB818ea772CE4E758a609745f88564F6d3A2f8B8', 6, 'USDT', 'Tether USD')
+export const COMP = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 18, 'COMP', 'Compound')
+export const MKR = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 18, 'MKR', 'Maker')
+export const AMPL = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 9, 'AMPL', 'Ampleforth')
+export const WBTC = new Token(ChainId.MAINNET, '0x8B01E7ff72E4dcdABa6074E77A4d21dB2f372893', 8, 'WBTC', 'Wrapped BTC')
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
 export const AVERAGE_BLOCK_TIME_IN_SECS = 14
@@ -27,7 +27,7 @@ export const PROPOSAL_LENGTH_IN_SECS = AVERAGE_BLOCK_TIME_IN_SECS * PROPOSAL_LEN
 
 export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 
-export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
+export const TIMELOCK_ADDRESS = '0xfd0b1E8f1510b83dE8B656E634aCB53765179E5a'
 
 const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
 export const UNI: { [chainId in ChainId]: Token } = {
@@ -78,6 +78,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
 }
+alert(JSON.stringify(ChainId,null,4));
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
